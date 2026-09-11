@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notas | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/desempenho.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="sidebar__logo">
+            <h1 class="sidebar__title">Tech Academy</h1>
+            <p class="sidebar__subtitle">Plataforma de Estudos</p>
+        </a>
+
+        <nav class="sidebar__navigation" aria-label="Menu lateral">
+
+            <ul class="sidebar__menu">
+
+                <li>
+                    <a href="index.html" class="sidebar__link ">
+                        <span class="material-symbols-outlined">home</span>
+                        Tela Inicial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cursos.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">school</span>
+                        Minhas Matérias
+                    </a>
+                </li>
+
+                <li>
+                    <a href="desempenho.html" class="sidebar__link sidebar__link--active">
+                        <span class="material-symbols-outlined">analytics</span>
+                        Notas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="forum.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">forum</span>
+                        Fórum
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracao.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">settings</span>
+                        Configurações
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <section class="sidebar__support">
+
+            <h2 class="sidebar__support-title">
+                Suporte
+            </h2>
+
+            <button class="sidebar__support-button">
+                Central de Ajuda
+            </button>
+
+        </section>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="layout">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <section class="topbar__left">
+                <h2 class="topbar__title">Painel do Estudante</h2>
+            </section>
+
+            <section class="topbar__right">
+
+                <form class="search-form">
+
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+
+                    <input
+                        type="search"
+                        class="search-form__input"
+                        placeholder="Buscar matérias..."
+                    >
+
+                </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a href="configuracao.html" class="profile__name">
+                            Maria Cecilia
+                        </a>
+                    </div>
+
+                    <a href="configuracao.html">
+                        <img
+                            src="https://images.pexels.com/photos/30468665/pexels-photo-30468665.jpeg"
+                            alt="Foto do usuário"
+                            class="profile__image"
+                        >
+                    </a>
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+                </article>
+
+            </section>
+
+        </header>
+
+        <!-- ESTATÍSTICAS --> 
+        <section class="statistics-section">
+
+        <article class="stat-card">
+            <div class="stat-card__header"> <span> Média Geral </span> <span class="material-symbols-outlined"> trending_up </span> </div>
+            <h2 class="stat-card__value" id="averageGrade" > 0.0 </h2>
+            <p class="stat-card__description"> +12% este mês </p>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-card__header"> <span> Conclusão do Plano </span> <span class="material-symbols-outlined"> check_circle </span> </div>
+            <h2 class="stat-card__value" id="completionRate" > 92% </h2>
+            <div class="progress-bar">
+            <div class="progress-bar__fill"></div>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-card__header"> <span> Rank Global </span> <span class="material-symbols-outlined"> military_tech </span> </div>
+            <h2 class="stat-card__value"> #42 </h2>
+            <p class="stat-card__description"> Top 5% da academia </p>
+        </article>
+
+        </section>
+        <!-- PERFORMANCE --> 
+        <section class="performance-section">
+
+        <!-- CONTEÚDO --> 
+        <section class="performance-content">
+            <div class="section-title">
+            <span class="material-symbols-outlined"> bar_chart </span> 
+            <h2> Desempenho por Matéria </h2>
+            </div>
+
+            <!-- MATÉRIA C# --> 
+            <article class="subject-card">
+
+            <section class="subject-card__header">
+                <div class="subject-card__info">
+                <div class="subject-card__icon"> <span class="material-symbols-outlined"> code </span> </div>
+                <div>
+                    <h3> Orientação a Objetos com C# </h3>
+                </div>
+                </div>
+                <div class="subject-card__grade"> <span> Média </span> <strong id="csharpGrade"> 0.0 </strong> </div>
+            </section>
+
+            <!-- NÍVEIS C# --> 
+            <section class="csharp-subject-levels">
+
+                <!-- FÁCIL --> 
+                <article class="level-card">
+                <div class="level-card__top"> <span> Fácil </span> <strong> 9.0 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--easy" style="width: 90%;" ></div>
+                </div>
+                </article>
+
+                <!-- MÉDIO --> 
+                <article class="level-card">
+
+                <div class="level-card__top"> <span> Médio </span> <strong> 7.5 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--medium" style="width: 75%;" ></div>
+                </div>
+                </article>
+
+                <!-- DIFÍCIL --> 
+                <article class="level-card">
+                <div class="level-card__top"> <span> Difícil </span> <strong> 6.0 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--hard" style="width: 60%;" ></div>
+                </div>
+                </article>
+
+            </section>
+
+            <!-- MATÉRIA PYTHON --> 
+            <section class="subject-card__header">
+                <div class="subject-card__info">
+                <div class="subject-card__icon"> <span class="material-symbols-outlined"> analytics </span> </div>
+                <div>
+                    <h3> Análise de Dados com Python </h3>
+                </div>
+                </div>
+                <div class="subject-card__grade"> <span> Média </span> <strong id="pythonGrade"> 0.0 </strong> </div>
+            </section>
+
+            <!-- NÍVEIS PYTHON --> 
+            <section class="python-subject-levels">
+                <!-- FÁCIL --> 
+                <article class="level-card">
+                <div class="level-card__top"> <span> Fácil </span> <strong> 9.0 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--easy" style="width: 90%;" ></div>
+                </div>
+                </article>
+
+                <!-- MÉDIO --> 
+                <article class="level-card">
+
+                <div class="level-card__top"> <span> Médio </span> <strong> 7.5 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--medium" style="width: 75%;" ></div>
+                </div>
+                </article>
+
+                <!-- DIFÍCIL --> 
+                <article class="level-card">
+                    <div class="level-card__top"> <span> Difícil </span> <strong> 6.0 </strong> </div>
+                    <div class="level-progress">
+                        <div class="level-progress__fill level-progress__fill--hard" style="width: 60%;" ></div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- MATÉRIA ENGENHARIA DE SOFTWARE --> 
+            <section class="subject-card__header">
+                <div class="subject-card__info">
+                <div class="subject-card__icon"> <span class="material-symbols-outlined"> analytics </span> </div>
+                <div>
+                    <h3> Engenharia de Software </h3>
+                </div>
+                </div>
+                <div class="subject-card__grade"> <span> Média </span> <strong id="pythonGrade"> 0.0 </strong> </div>
+            </section>
+
+            <!-- NÍVEIS ENGENHARIA DE SOFTWARE --> 
+            <section class="python-subject-levels">
+                <!-- FÁCIL --> 
+                <article class="level-card">
+                <div class="level-card__top"> <span> Fácil </span> <strong> 9.0 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--easy" style="width: 90%;" ></div>
+                </div>
+                </article>
+
+                <!-- MÉDIO --> 
+                <article class="level-card">
+
+                <div class="level-card__top"> <span> Médio </span> <strong> 7.5 </strong> </div>
+                <div class="level-progress">
+                    <div class="level-progress__fill level-progress__fill--medium" style="width: 75%;" ></div>
+                </div>
+                </article>
+
+                <!-- DIFÍCIL --> 
+                <article class="level-card">
+                    <div class="level-card__top"> <span> Difícil </span> <strong> 6.0 </strong> </div>
+                    <div class="level-progress">
+                        <div class="level-progress__fill level-progress__fill--hard" style="width: 60%;" ></div>
+                    </div>
+                </article>
+            </section>
+
+            </article>
+
+        </section>
+
+        <!-- SIDEBAR DIREITA --> 
+        <aside class="performance-sidebar">
+            <!-- INSIGHT --> 
+            <article class="insight-card">
+            <span class="material-symbols-outlined"> lightbulb </span> 
+            <h3> Insight de IA </h3>
+            <p> Seu desempenho em questões difíceis caiu 5% na última semana. </p>
+            <button class="insight-card__button"> Ver Sugestões </button> 
+            </article>
+
+            <!-- EVOLUÇÃO --> 
+            <article class="history-card">
+            <h3> Evolução Mensal </h3>
+            <div class="history-chart">
+                <div class="history-chart__bar" style="height: 40%;" ></div>
+                <div class="history-chart__bar" style="height: 60%;" ></div>
+                <div class="history-chart__bar" style="height: 55%;" ></div>
+                <div class="history-chart__bar history-chart__bar--active" style="height: 85%;" ></div>
+            </div>
+
+            <div class="history-chart__months"> <span>JAN</span> <span>FEV</span> <span>MAR</span> <span>ABR</span> </div>
+            </article>
+        </aside>
+        </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    </main>
+
+    <script src="js/desempenho.js"></script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/admin_cadastrar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar__brand">
+
+            <h1 class="topbar__logo">
+                Tech Academy
+            </h1>
+
+            <p class="topbar__subtitle">
+                Painel Administrativo
+            </p>
+
+        </div>
+
+        <section class="topbar__right">
+
+            <form class="search-form">
+
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+                <input
+                    type="search"
+                    class="search-form__input"
+                    placeholder="Buscar usuários..."
+                >
+
+            </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a class="profile__name">
+                            Carlos Henrique
+                        </a>
+                    </div>
+
+                    <img
+                        src="https://randomuser.me/api/portraits/men/52.jpg"
+                        alt="Foto do usuário"
+                        class="profile__image"
+                    >
+                    
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+            </article>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="admin-panel">
+
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb">
+
+            <a href="admin_home.html" class="breadcrumb__link">
+
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+
+            </a>
+
+            <span class="material-symbols-outlined breadcrumb__arrow">
+                chevron_right
+            </span>
+
+            <span class="breadcrumb__current">
+                Cadastrar usuário
+            </span>
+
+        </nav>
+
+        <!-- TÍTULO -->
+        <section class="admin-header">
+
+            <h2 class="admin-header__title">
+                Cadastrar Usuário
+            </h2>
+
+            <p class="admin-header__description">
+                Cadastre coordenadores e tutores da plataforma.
+            </p>
+
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="user-form-section">
+
+            <form class="user-form">
+
+                <!-- LADO ESQUERDO -->
+                <div class="user-form__left">
+
+                    <!-- NOME -->
+                    <div class="input-group">
+
+                        <span class="material-symbols-outlined input-group__icon">
+                            account_circle
+                        </span>
+
+                        <input type="text" id="inputNome" class="input-group__field" placeholder="Nome completo">
+
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="input-group">
+
+                        <span class="material-symbols-outlined input-group__icon">
+                            mail
+                        </span>
+
+                        <input type="email" id="inputEmail" class="input-group__field"
+                            placeholder="E-mail institucional">
+
+                    </div>
+
+                    <!-- SENHA -->
+                    <div class="input-group">
+
+                        <span class="material-symbols-outlined input-group__icon">
+                            key
+                        </span>
+
+                        <input type="password" id="inputSenha" class="input-group__field" placeholder="Senha">
+
+                    </div>
+
+                    <!-- CONFIRMAR -->
+                    <div class="input-group">
+
+                        <span class="material-symbols-outlined input-group__icon">
+                            key
+                        </span>
+
+                        <input type="password" id="inputConfirmaSenha" class="input-group__field"
+                            placeholder="Confirmar senha">
+
+                    </div>
+
+                    <!-- CPF -->
+                    <div class="cpf-group">
+
+                        <label class="cpf-group__label">
+                            CPF:
+                        </label>
+
+                        <input type="text" id="inputCPF" class="cpf-group__field" placeholder="000.000.000-00">
+
+                    </div>
+
+                </div>
+
+                <!-- LADO DIREITO -->
+                <div class="user-form__right">
+
+                    <!-- TIPO -->
+                    <div class="select-group">
+
+                        <div class="select-group__header">
+
+                            <span class="material-symbols-outlined">
+                                badge
+                            </span>
+
+                            <label>
+                                Cadastrar:
+                            </label>
+
+                        </div>
+
+                        <select class="select-group__field" id="userRole">
+
+                            <option value="">
+                                Selecionar cargo
+                            </option>
+
+                            <option value="tutor">
+                                Tutor
+                            </option>
+
+                            <option value="coordenador">
+                                Coordenador
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- MATÉRIA -->
+                    <div class="select-group" id="subjectField">
+
+                        <div class="select-group__header">
+
+                            <span class="material-symbols-outlined">
+                                menu_book
+                            </span>
+
+                            <label>
+                                Matéria do Tutor:
+                            </label>
+
+                        </div>
+
+                        <select class="select-group__field">
+
+                            <option>
+                                Selecionar matéria
+                            </option>
+
+                            <option>
+                                Engenharia de Software
+                            </option>
+
+                            <option>
+                                Análise de Dados com Python
+                            </option>
+
+                            <option>
+                                Orientação a Objetos com C#
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+            <!-- BOTÃO -->
+            <div class="submit-area">
+
+                <button type="button" class="submit-button" id="btnCadastrar">
+                    CRIAR USUÁRIO
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/admin_cadastrar.js"></script>
+
+    <script src="cursos.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>

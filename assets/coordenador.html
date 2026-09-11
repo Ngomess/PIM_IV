@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Coordenador | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/coordenador.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar__brand">
+
+            <h1 class="topbar__logo">
+                Tech Academy
+            </h1>
+
+            <p class="topbar__subtitle">
+                Painel do Coordenador
+            </p>
+
+        </div>
+
+        <section class="topbar__right">
+
+            <form class="search-form">
+
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+                <input
+                    type="search"
+                    class="search-form__input"
+                    placeholder="Buscar estudante..."
+                >
+
+            </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a class="profile__name">
+                            Ana Carolina
+                        </a>
+                    </div>
+
+                    <img
+                        src="https://randomuser.me/api/portraits/women/68.jpg"
+                        alt="Foto do usuário"
+                        class="profile__image"
+                    >
+                    
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+            </article>
+
+        </section>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+   <main class="dashboard">
+
+    <!-- HEADER -->
+    <section class="dashboard-header">
+
+        <h2 class="dashboard-header__title">
+            Métricas dos Alunos
+        </h2>
+
+        <p class="dashboard-header__description">
+            Acompanhe desempenho acadêmico e engajamento dos estudantes.
+        </p>
+
+    </section>
+
+    <!-- CARDS -->
+    <section class="metrics-grid">
+
+        <article class="metric-card">
+
+            <div class="metric-card__top">
+                <span class="material-symbols-outlined">
+                    groups
+                </span>
+
+                <span class="metric-card__badge">
+                    +12%
+                </span>
+            </div>
+
+            <h3 class="metric-card__value">
+                1.248
+            </h3>
+
+            <p class="metric-card__label">
+                Estudantes Ativos
+            </p>
+
+        </article>
+
+        <article class="metric-card">
+
+            <div class="metric-card__top">
+                <span class="material-symbols-outlined">
+                    school
+                </span>
+
+                <span class="metric-card__badge">
+                    5 Matérias
+                </span>
+            </div>
+
+            <h3 class="metric-card__value">
+                92%
+            </h3>
+
+            <p class="metric-card__label">
+                Média Geral
+            </p>
+
+        </article>
+
+        <article class="metric-card">
+
+            <div class="metric-card__top">
+                <span class="material-symbols-outlined">
+                    menu_book
+                </span>
+
+                <span class="metric-card__badge">
+                    Top
+                </span>
+            </div>
+
+            <h3 class="metric-card__value">
+                Engenharia de Software
+            </h3>
+
+            <p class="metric-card__label">
+                Matéria Mais Acessada
+            </p>
+
+        </article>
+
+    </section>
+
+    <!-- FILTROS -->
+    <section class="dashboard-filters">
+
+        <div class="filter-box">
+
+            <span class="material-symbols-outlined">
+                search
+            </span>
+
+            <input
+                type="text"
+                placeholder="Nome completo do estudante"
+                class="filter-box__input"
+            >
+
+        </div>
+
+        <div class="filter-box">
+
+            <span class="material-symbols-outlined">
+                filter_alt
+            </span>
+
+            <select class="filter-box__select">
+
+                <option>
+                    Todas as matérias
+                </option>
+
+                <option>
+                    Engenharia de Software
+                </option>
+
+                <option>
+                    Análise de Dados com Python
+                </option>
+
+                <option>
+                    Orientação a Objeto com C#
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+<!-- GRÁFICOS -->
+<section class="charts-grid">
+
+    <!-- MAIS ACESSADAS -->
+    <article class="chart-card">
+
+        <header class="chart-card__header">
+
+            <div>
+
+                <h3 class="chart-card__title">
+                    Matérias Mais Acessadas
+                </h3>
+
+                <p class="chart-card__description">
+                    Frequência de acesso dos estudantes.
+                </p>
+
+            </div>
+
+            <span class="material-symbols-outlined chart-card__icon">
+                pie_chart
+            </span>
+
+        </header>
+
+        <div class="chart-card__graph">
+            <canvas id="accessChart"></canvas>
+        </div>
+
+    </article>
+
+    <!-- DESEMPENHO -->
+    <article class="chart-card">
+
+        <header class="chart-card__header">
+
+            <div>
+
+                <h3 class="chart-card__title">
+                    Desempenho por Matéria
+                </h3>
+
+                <p class="chart-card__description">
+                    Média dos estudantes.
+                </p>
+
+            </div>
+
+            <span class="material-symbols-outlined chart-card__icon">
+                monitoring
+            </span>
+
+        </header>
+
+        <div class="chart-card__graph">
+            <canvas id="performanceChart"></canvas>
+        </div>
+
+    </article>
+
+</section>
+
+</main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><button id="footer__logout" class="footer__logout">Sair</button></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/coordenador.js"></script>
+
+    <!-- MODAL DE SAÍDA -->
+
+    <div
+    class="logout-modal"
+    id="logoutModal"
+    >
+
+    <div class="logout-modal__container">
+
+        <div class="logout-modal__icon">
+        ✋
+        </div>
+
+        <h2 class="logout-modal__title">
+        Deseja mesmo sair?
+        </h2>
+
+        <p class="logout-modal__text">
+        Sentiremos sua falta! Você poderá voltar a estudar a qualquer momento.
+        </p>
+
+        <div class="logout-modal__buttons">
+
+        <button
+            class="logout-modal__continue"
+            id="closeLogoutModal"
+        >
+            Continuar Estudando
+        </button>
+
+        <button
+            class="logout-modal__exit"
+            id="confirmLogout"
+        >
+            Sair
+        </button>
+
+        </div>
+
+        <span class="logout-modal__footer">
+        TECH ACADEMY © 2026
+        </span>
+
+    </div>
+
+    </div>
+
+
+      <!-- Widget VLibras -->
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>

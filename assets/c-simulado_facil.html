@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Simulado POO com C# | Tech Academy</title>
+
+  <link rel="stylesheet" href="./css/c-simulado_facil.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <div class="topbar-container">
+
+      <h1 class="logo">
+        Tech Academy
+      </h1>
+
+      <p class="logo__subtitle">
+        Plataforma de Estudos
+      </p>
+    </div>
+
+    <div class="topbar__right">
+      <a href="desempenho.html" class="finish-button"
+          >
+          Finalizar Simulado
+      </a>
+
+    </div>
+
+  </header>
+
+  <main class="main-content">
+
+    <section class="quiz-section">
+
+      <article class="quiz-card">
+
+        <header class="quiz-header">
+
+          <div>
+
+            <span class="quiz-label">
+              Simulado de Orientação a Objetos
+            </span>
+
+            <h2 class="quiz-title">
+              C#
+            </h2>
+
+          </div>
+
+          <div class="progress-wrapper">
+
+            <p id="progressText">
+              Questão 1 de 10
+            </p>
+
+            <div class="progress-bar">
+
+              <div
+                class="progress-fill"
+                id="progressFill"
+              ></div>
+
+            </div>
+
+          </div>
+
+        </header>
+
+        <section class="question-section">
+
+          <div class="question-header">
+
+            <span
+              class="question-number"
+              id="questionNumber"
+            >
+              1
+            </span>
+
+            <p
+              class="question-text"
+              id="questionText"
+            >
+            </p>
+
+          </div>
+
+          <form
+            class="answers-form"
+            id="answersForm"
+          >
+          </form>
+
+          <div class="button-wrapper">
+
+            <button
+              type="button"
+              class="confirm-button"
+              id="nextButton"
+            >
+              Próxima Questão
+            </button>
+
+          </div>
+
+        </section>
+
+      </article>
+
+    </section>
+
+<aside class="sidebar">
+
+  <section class="activities-card">
+
+    <header class="activities-header">
+
+      <span class="material-symbols-outlined">
+        format_list_bulleted
+      </span>
+
+      <h2>
+        Questões
+      </h2>
+
+    </header>
+
+    <div
+      class="questions-status"
+      id="questionsStatus"
+    >
+    </div>
+
+  </section>
+
+  <section class="score-card">
+
+    <h3>
+      Resultado Atual
+    </h3>
+
+    <p id="scoreText">
+      0 acertos
+    </p>
+
+  </section>
+
+</aside>
+
+  </main>
+
+      <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" id="footer__logout" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+  <script src="./js/c-simulado_facil.js"></script>
+  
+    <script src="cursos.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>

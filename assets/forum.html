@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fórum | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/forum.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="sidebar__logo">
+            <h1 class="sidebar__title">Tech Academy</h1>
+            <p class="sidebar__subtitle">Plataforma de Estudos</p>
+        </a>
+
+        <nav class="sidebar__navigation" aria-label="Menu lateral">
+
+            <ul class="sidebar__menu">
+
+                <li>
+                    <a href="index.html" class="sidebar__link ">
+                        <span class="material-symbols-outlined">home</span>
+                        Tela Inicial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cursos.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">school</span>
+                        Meus Cursos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="desempenho.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">analytics</span>
+                        Notas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="forum.html" class="sidebar__link sidebar__link--active">
+                        <span class="material-symbols-outlined">forum</span>
+                        Fórum
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracao.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">settings</span>
+                        Configurações
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <section class="sidebar__support">
+
+            <h2 class="sidebar__support-title">
+                Suporte
+            </h2>
+
+            <button class="sidebar__support-button">
+                Central de Ajuda
+            </button>
+
+        </section>
+
+    </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="layout">
+
+      <!-- HEADER -->
+      <header class="topbar">
+
+          <section class="topbar__left">
+              <h2 class="topbar__title">Fórum de Dúvidas</h2>
+          </section>
+
+          <section class="topbar__right">
+
+              <form class="search-form">
+
+                  <span class="material-symbols-outlined">
+                      search
+                  </span>
+
+                  <input
+                      type="search"
+                      class="search-form__input"
+                      placeholder="Buscar matérias..."
+                  >
+
+                </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a href="configuracao.html" class="profile__name">
+                            Maria Cecilia
+                        </a>
+                    </div>
+
+                    <a href="configuracao.html">
+                        <img
+                            src="https://images.pexels.com/photos/30468665/pexels-photo-30468665.jpeg"
+                            alt="Foto do usuário"
+                            class="profile__image"
+                        >
+                    </a>
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+                </article>
+
+          </section>
+
+        </header>
+
+    <!-- CONTAINER -->
+    <section class="forum-container">
+
+      <!-- INTRODUÇÃO -->
+      <section class="forum-hero">
+
+        <h1 class="forum-hero__title">
+          Central de Conhecimento
+        </h1>
+
+        <p class="forum-hero__description">
+          Tire suas dúvidas técnicas com nossa rede de especialistas da Tech Academy.
+        </p>
+
+      </section>
+
+      <!-- FORMULÁRIO -->
+      <section class="question-form">
+
+        <div class="question-form__header">
+
+          <div class="question-form__icon">
+            <span class="material-symbols-outlined">
+              add_comment
+            </span>
+          </div>
+
+          <div>
+            <h2 class="question-form__title">
+              Qual a sua dúvida hoje?
+            </h2>
+
+            <p class="question-form__subtitle">
+              Seja específico para receber as melhores respostas.
+            </p>
+          </div>
+
+        </div>
+
+        <form id="forumForm">
+
+          <div class="question-form__grid">
+
+            <div class="question-form__field question-form__field--large">
+
+              <label for="questionTitle">
+                Assunto da Pergunta
+              </label>
+
+              <input
+                type="text"
+                id="questionTitle"
+                placeholder="Ex: Erro ao instanciar classe abstrata no C#"
+              >
+
+            </div>
+
+            <div class="question-form__field">
+
+              <label for="questionCategory">
+                Matéria / Tecnologia
+              </label>
+
+              <select id="questionCategory">
+
+                <option value="">
+                  Selecionar matéria
+                </option>
+
+                <option value="csharp">
+                  Orientação a Obejtos com C#
+                </option>
+
+                <option value="uiux">
+                  Análise de Dados com Python
+                </option>
+
+                <option value="database">
+                  Engenharia de Software
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+          <div class="question-form__field">
+
+            <label for="questionDescription">
+              Descrição Detalhada
+            </label>
+
+            <textarea
+              id="questionDescription"
+              rows="5"
+              placeholder="Descreva seu problema..."
+            ></textarea>
+
+          </div>
+
+          <div class="question-form__footer">
+
+            <button type="submit" class="submit-button">
+              Enviar Pergunta
+            </button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- DISCUSSÕES -->
+      <section class="discussions">
+
+        <div class="discussions__header">
+
+          <h2 class="discussions__title">
+            Discussões Recentes
+          </h2>
+
+        </div>
+
+        <!-- CARD -->
+        <article class="discussion-card">
+
+          <div class="discussion-card__votes">
+
+            <button class="vote-button">
+              <span class="material-symbols-outlined">
+                expand_less
+              </span>
+            </button>
+
+            <strong>24</strong>
+
+            <button class="vote-button">
+              <span class="material-symbols-outlined">
+                expand_more
+              </span>
+            </button>
+
+          </div>
+
+          <div class="discussion-card__content">
+
+            <div class="discussion-card__tags">
+
+              <span class="tag tag--blue">
+                Orientação a Objetos com C#
+              </span>
+
+              <span class="tag tag--green">
+                Resolvido
+              </span>
+
+            </div>
+
+            <h3 class="discussion-card__title">
+              Diferença de performance entre yield return e listas?
+            </h3>
+
+            <p class="discussion-card__text">
+              Estou processando um grande volume de logs e gostaria de entender se o uso de iteradores realmente economiza memória.
+            </p>
+
+            <div class="discussion-card__footer">
+
+              <div class="discussion-card__stats">
+
+                <span>
+                  3 respostas
+                </span>
+
+              </div>
+
+              <div class="discussion-card__author">
+
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBojBnzLI03qMO6cWFxohzvAM17mcINQxIlYYxxujCsPCk9k5YJ2nMdloXB8u-F_sJCBHx4M2cqHg1s83Y5VETHRRe2zIi4Jsvp63y6sgfnYRKFz3s6nUaSQ0nOYDofgFbia5vuT2MLOALC1rJpVcJKTLsp8-AUsmk5h0N_ganwJlei7oyuv8k-4wA5JVe9dBbqG_EVhxxOyCEFvAxBSomCgu0x8RsneEHGA5_DeL6GT5b7zKnQU-owcP3HkKdzZeLtEJopfiJwBa-u"
+                  alt="André Silva"
+                >
+
+                <span>
+                  André Silva
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/forum.js"></script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

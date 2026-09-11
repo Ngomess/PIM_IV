@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/admin_gerenciar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar__brand">
+
+            <h1 class="topbar__logo">
+                Tech Academy
+            </h1>
+
+            <p class="topbar__subtitle">
+                Painel Administrativo
+            </p>
+
+        </div>
+
+        <section class="topbar__right">
+
+            <form class="search-form">
+
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+                <input
+                    type="search"
+                    class="search-form__input"
+                    placeholder="Buscar usuários..."
+                >
+
+            </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a class="profile__name">
+                            Carlos Henrique
+                        </a>
+                    </div>
+
+                    <img
+                        src="https://randomuser.me/api/portraits/men/52.jpg"
+                        alt="Foto do usuário"
+                        class="profile__image"
+                    >
+                    
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+            </article>
+        </section>
+    </header>
+
+        <!-- MAIN -->
+    <main class="admin-panel">
+
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb">
+
+            <a href="admin_home.html" class="breadcrumb__link">
+
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+
+            </a>
+
+            <span class="material-symbols-outlined breadcrumb__arrow">
+                chevron_right
+            </span>
+
+            <span class="breadcrumb__current">
+                Gerenciar usuário
+            </span>
+
+        </nav>
+
+        <!-- HEADER -->
+        <section class="admin-header">
+
+            <h2 class="admin-header__title">
+                Gerenciar Usuários
+            </h2>
+
+            <p class="admin-header__description">
+                Pesquise usuários e controle o status das contas.
+            </p>
+
+        </section>
+
+        <!-- SEARCH -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="material-symbols-outlined search-box__icon">
+                    search
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-box__input"
+                    placeholder="Buscar por nome, CPF ou e-mail"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- USERS -->
+        <section class="users-list" id="usersList">
+
+            <!-- CARD -->
+            <article class="user-card">
+
+                <div class="user-card__left">
+
+                    <img
+                        src="https://randomuser.me/api/portraits/women/44.jpg"
+                        alt="Usuário"
+                        class="user-card__image"
+                    >
+
+                    <div class="user-card__info">
+
+                        <h3 class="user-card__name">
+                            Fatima Oliveira
+                        </h3>
+
+                        <p class="user-card__text">
+                            fatima@email.com
+                        </p>
+
+                        <p class="user-card__text">
+                            CPF: 123.456.789-00
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="user-card__right">
+
+                    <span class="user-status user-status--active">
+                        Ativo
+                    </span>
+
+                    <button class="status-button status-button--disable">
+                        Desativar
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- CARD -->
+            <article class="user-card">
+
+                <div class="user-card__left">
+
+                    <img
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        alt="Usuário"
+                        class="user-card__image"
+                    >
+
+                    <div class="user-card__info">
+
+                        <h3 class="user-card__name">
+                            André Silva
+                        </h3>
+
+                        <p class="user-card__text">
+                            andre@email.com
+                        </p>
+
+                        <p class="user-card__text">
+                            CPF: 987.654.321-00
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="user-card__right">
+
+                    <span class="user-status user-status--inactive">
+                        Inativo
+                    </span>
+
+                    <button class="status-button status-button--enable">
+                        Ativar
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/admin_gerenciar.js"></script>
+
+    <script src="cursos.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>    

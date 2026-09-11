@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/admin_home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar__brand">
+
+            <h1 class="topbar__logo">
+                Tech Academy
+            </h1>
+
+            <p class="topbar__subtitle">
+                Painel Administrativo
+            </p>
+
+        </div>
+
+        <section class="topbar__right">
+
+            <form class="search-form">
+
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+                <input
+                    type="search"
+                    class="search-form__input"
+                    placeholder="Buscar usuários..."
+                >
+
+            </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a class="profile__name">
+                            Carlos Henrique
+                        </a>
+                    </div>
+
+                    <img
+                        src="https://randomuser.me/api/portraits/men/52.jpg"
+                        alt="Foto do usuário"
+                        class="profile__image"
+                    >
+                    
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+            </article>
+
+    </header>
+
+    <!-- MAIN -->
+    <main class="admin-home">
+
+        <!-- HERO -->
+        <section class="admin-home__hero">
+
+            <h2 class="admin-home__title">
+                Painel Administrativo
+            </h2>
+
+            <p class="admin-home__description">
+                Gerencie usuários da plataforma e cadastre novos coordenadores e tutores.
+            </p>
+
+        </section>
+
+        <!-- CARDS -->
+        <section class="admin-actions">
+
+            <!-- GERENCIAR -->
+            <article
+                class="admin-card"
+                id="manageUsersCard"
+            >
+
+                <span class="material-symbols-outlined admin-card__icon">
+                    manage_accounts
+                </span>
+
+                <h3 class="admin-card__title">
+                    Gerenciar Usuário
+                </h3>
+
+                <p class="admin-card__text">
+                    Ative, desative e consulte contas de usuários da plataforma.
+                </p>
+
+                <a
+                    href="admin_gerenciar.html"
+                    class="admin-card__button"
+                >
+                    ACESSAR
+                </a>
+
+            </article>
+
+            <!-- CADASTRAR -->
+            <article
+                class="admin-card"
+                id="registerUsersCard"
+            >
+
+                <span class="material-symbols-outlined admin-card__icon">
+                    person_add
+                </span>
+
+                <h3 class="admin-card__title">
+                    Cadastrar Usuário
+                </h3>
+
+                <p class="admin-card__text">
+                    Cadastre novos coordenadores e tutores no sistema.
+                </p>
+
+                <a
+                    href="admin_cadastrar.html"
+                    class="admin-card__button"
+                >
+                    ACESSAR
+                </a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/admin_home.js"></script>
+
+    <script src="cursos.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>

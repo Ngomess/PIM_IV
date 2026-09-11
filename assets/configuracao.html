@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Configurações | Tech Academy</title>
+
+  <link rel="stylesheet" href="css/configuracao.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  >
+</head>
+
+<!-- Modal Excluir Conta -->
+<div class="modal-overlay" id="modalExcluir">
+    
+    <div class="modal-container"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalTitulo"
+         aria-describedby="modalDescricao">
+
+        <div class="modal-top-bar"></div>
+
+        <section class="modal-content">
+
+            <div class="modal-alert-icon">
+                <span class="material-symbols-outlined"
+                      aria-hidden="true">
+                    warning
+                </span>
+            </div>
+
+            <h2 class="modal-title" id="modalTitulo">
+                Excluir conta permanentemente?
+            </h2>
+
+            <p class="modal-text" id="modalDescricao">
+                Esta ação é irreversível. Todos os seus cursos,
+                progresso e certificações serão apagados para sempre.
+                Sua trajetória de estudos e conquistas técnicas
+                não poderão ser recuperadas.
+            </p>
+
+            <label class="modal-checkbox-area">
+
+                <input type="checkbox" id="checkboxConfirmar">
+
+                <div>
+                    <strong>
+                        Entendo as consequências
+                    </strong>
+
+                    <p>
+                        Confirmo que desejo remover todos os meus dados
+                        educacionais permanentemente.
+                    </p>
+                </div>
+
+            </label>
+
+            <button 
+                id="btnConfirmarExclusao"
+                class="modal-delete-button"
+                disabled
+            >
+                Excluir Definitivamente
+            </button>
+
+            <button 
+                id="btnCancelarModal"
+                class="modal-cancel-button"
+            >
+                Cancelar
+            </button>
+
+        </section>
+
+    </div>
+
+</div>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <a href="index.html" class="sidebar__logo">
+      <h1 class="sidebar__title">Tech Academy</h1>
+      <p class="sidebar__subtitle">Plataforma de Estudos</p>
+    </a>
+
+    
+        <nav class="sidebar__navigation" aria-label="Menu lateral">
+
+            <ul class="sidebar__menu">
+
+                <li>
+                    <a href="index.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">home</span>
+                        Tela Inicial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cursos.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">school</span>
+                        Meus Cursos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="desempenho.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">analytics</span>
+                        Notas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="forum.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">forum</span>
+                        Fórum
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracao.html" class="sidebar__link sidebar__link--active">
+                        <span class="material-symbols-outlined">settings</span>
+                        Configurações
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <section class="sidebar__support">
+
+            <h2 class="sidebar__support-title">
+                Suporte
+            </h2>
+
+            <button class="sidebar__support-button">
+                Central de Ajuda
+            </button>
+
+        </section>
+
+  </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="layout">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <section class="topbar__left">
+                <h2 class="topbar__title">Configurações</h2>
+            </section>
+
+            <section class="topbar__right">
+
+                <form class="search-form">
+
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+
+                    <input
+                        type="search"
+                        class="search-form__input"
+                        placeholder="Buscar matérias..."
+                    >
+
+                </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a href="configuracao.html" class="profile__name">
+                            Maria Cecilia
+                        </a>
+                    </div>
+
+                    <a href="configuracao.html">
+                        <img
+                            src="https://images.pexels.com/photos/30468665/pexels-photo-30468665.jpeg"
+                            alt="Foto do usuário"
+                            class="profile__image"
+                        >
+                    </a>
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+                </article>
+
+            </section>
+
+        </header>
+
+    <!-- HERO -->
+    <section class="main-content">
+
+      <section class="page-header">
+
+        <h2 class="page-header__title">
+          Minha Conta
+        </h2>
+
+        <p class="page-header__description">
+          Gerencie suas informações pessoais e preferências.
+        </p>
+
+      </section>
+
+      <div class="settings-grid">
+
+        <!-- PERFIL -->
+        <section class="profile-card">
+
+          <header class="profile-card__header">
+
+            <div>
+              <h3 class="profile-card__title">
+                Perfil do Usuário
+              </h3>
+
+              <p class="profile-card__description">
+                Atualize sua foto e dados pessoais.
+              </p>
+            </div>
+
+          </header>
+
+          <div class="profile-info">
+
+            <div class="profile-info__image-wrapper">
+
+              <img
+                src="https://images.pexels.com/photos/30468665/pexels-photo-30468665.jpeg"
+                alt="Foto de perfil"
+                class="profile-info__image"
+              >
+
+            </div>
+
+            <div class="profile-info__content">
+
+              <h4 class="profile-info__name">
+                Maria Cecilia
+              </h4>
+
+              <div class="profile-info__actions">
+
+                <button class="button button--primary">
+                  Alterar Foto
+                </button>
+
+                <button class="button button--secondary">
+                  Remover
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FORMULÁRIO -->
+          <form class="profile-form" id="profileForm">
+
+            <div class="profile-form__group">
+
+              <label for="userName" class="profile-form__label">
+                Nome Completo
+              </label>
+
+              <input
+                type="text"
+                id="userName"
+                class="profile-form__input"
+                value="Maria Cecilia"
+              >
+
+            </div>
+
+            <div class="profile-form__group">
+
+              <label for="userEmail" class="profile-form__label">
+                E-mail
+              </label>
+
+              <input
+                type="email"
+                id="userEmail"
+                class="profile-form__input"
+                value="maria@email.com"
+              >
+
+            </div>
+
+            <div class="profile-form__footer">
+
+              <button
+                type="submit"
+                class="button button--primary"
+              >
+                Salvar Alterações
+              </button>
+
+            </div>
+
+          </form>
+
+        </section>
+
+        <!-- COLUNA LATERAL -->
+        <aside class="settings-sidebar">
+
+          <!-- SEGURANÇA -->
+          <section class="settings-box">
+
+            <div class="settings-box__header">
+
+              <span class="material-symbols-outlined settings-box__icon">
+                security
+              </span>
+
+              <h3 class="settings-box__title">
+                Segurança
+              </h3>
+
+            </div>
+
+            <div class="settings-box__content">
+
+              <button class="settings-action">
+                Alterar Senha
+              </button>
+
+              <button class="settings-action">
+                Autenticação em 2 Etapas
+              </button>
+
+            </div>
+
+          </section>
+
+          <!-- ZONA DE PERIGO -->
+          <section class="danger-zone">
+
+            <div class="danger-zone__header">
+
+              <span class="material-symbols-outlined">
+                warning
+              </span>
+
+              <h3>
+                Zona de Perigo
+              </h3>
+
+            </div>
+
+            <p class="danger-zone__text">
+              Essas ações são irreversíveis.
+            </p>
+
+            <div class="danger-zone__actions">
+
+              <button class="button button--danger-outline">
+                Desativar Conta
+              </button>
+
+              <button 
+              id="btnExcluirConta"
+              class="button button--danger">
+                Excluir Conta
+              </button>
+
+            </div>
+
+          </section>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#" class="footer__logout">Sair</a></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+  </main>
+
+  <script src="js/configuracao.js"></script>
+
+    <script src="cursos.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

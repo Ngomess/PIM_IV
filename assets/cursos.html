@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minhas Matérias | Tech Academy</title>
+
+    <link rel="stylesheet" href="./css/cursos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="sidebar__logo">
+            <h1 class="sidebar__title">Tech Academy</h1>
+            <p class="sidebar__subtitle">Plataforma de Estudos</p>
+        </a>
+
+        <nav class="sidebar__navigation" aria-label="Menu lateral">
+
+            <ul class="sidebar__menu">
+
+                <li>
+                    <a href="index.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">home</span>
+                        Tela Inicial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cursos.html" class="sidebar__link sidebar__link--active">
+                        <span class="material-symbols-outlined">school</span>
+                        Minhas Matérias
+                    </a>
+                </li>
+
+                <li>
+                    <a href="desempenho.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">analytics</span>
+                        Notas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="forum.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">forum</span>
+                        Fórum
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracao.html" class="sidebar__link">
+                        <span class="material-symbols-outlined">settings</span>
+                        Configurações
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <section class="sidebar__support">
+
+            <h2 class="sidebar__support-title">
+                Suporte
+            </h2>
+
+            <button class="sidebar__support-button">
+                Central de Ajuda
+            </button>
+
+        </section>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="layout">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <section class="topbar__left">
+                <h2 class="topbar__title">Minhas Matérias</h2>
+            </section>
+
+            <section class="topbar__right">
+
+                <form class="search-form">
+
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+
+                    <input
+                        type="search"
+                        class="search-form__input"
+                        placeholder="Buscar matérias..."
+                    >
+
+                </form>
+
+                <article class="profile">
+                    
+                    <div class="profile__info">
+                        <a href="configuracao.html" class="profile__name">
+                            Maria Cecilia
+                        </a>
+                    </div>
+
+                    <a href="configuracao.html">
+                        <img
+                            src="https://images.pexels.com/photos/30468665/pexels-photo-30468665.jpeg"
+                            alt="Foto do usuário"
+                            class="profile__image"
+                        >
+                    </a>
+
+                    <button id="exit__button" class="profile__logout">
+                        <span class="material-symbols-outlined">
+                            exit_to_app
+                        </span>
+                    </button>
+
+                </article>
+
+            </section>
+
+        </header>
+
+        <!-- COURSE SECTION -->
+        <section class="courses">
+
+            <div class="courses__top">
+
+                <div class="courses__heading">
+
+                    <h2 class="courses__title">
+                        Explore seu Progresso
+                    </h2>
+
+                </div>
+
+                <div class="filter">
+
+                    <button class="filter__button filter__button--active">
+                        Todos
+                    </button>
+
+                    <button class="filter__button">
+                        Iniciados
+                    </button>
+
+                    <button class="filter__button">
+                        Terminados
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- COURSE GRID -->
+            <div class="course-grid">
+
+                <!-- COURSE CARD -->
+                <article class="course-card">
+
+                    <div class="course-card__banner">
+
+                        <img
+                            class="course-card__image"
+                            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+                            alt="Orientação a Objetos com C#"
+                        >
+
+                        <span class="course-card__status">
+                            Iniciado
+                        </span>
+
+                    </div>
+
+                    <div class="course-card__content">
+
+                        <h3 class="course-card__title">
+                            Orientação a Objetos com C#
+                        </h3>
+
+                        <p class="course-card__description">
+                            POO, .NET Core, LINQ e arquitetura de sistemas.
+                        </p>
+
+                        <div class="course-card__progress">
+
+                            <div class="course-card__progress-info">
+                                <span>PROGRESSO</span>
+                                <span>65%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 65%;"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="course-card__footer">
+
+                        <a href="nivel-c.html">
+                            <button class="course-card__button">
+                                CONTINUAR APRENDIZADO
+                            </button>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURSE CARD -->
+                <article class="course-card">
+
+                    <div class="course-card__banner">
+
+                        <img
+                            class="course-card__image"
+                            src="https://images.unsplash.com/photo-1558655146-d09347e92766"
+                            alt="Análise de Dados com Python"
+                        >
+
+                        <span class="course-card__status">
+                             Não Iniciado
+                        </span>
+
+                    </div>
+
+                    <div class="course-card__content">
+
+                        <h3 class="course-card__title">
+                            Análise de Dados com Python
+                        </h3>
+
+                        <p class="course-card__description">
+                            Análise de dados, visualização e machine learning com Python.
+                        </p>
+
+                        <div class="course-card__progress">
+
+                            <div class="course-card__progress-info">
+                                <span>PROGRESSO</span>
+                                <span>0%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 0%;"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="course-card__footer">
+
+                        <a href="nivel-python.html">
+                            <button class="course-card__button">
+                                INICIAR APRENDIZADO
+                            </button>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- COURSE CARD -->
+                <article class="course-card">
+
+                    <div class="course-card__banner">
+
+                        <img
+                            class="course-card__image"
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                            alt="Engenharia de Software"
+                        >
+
+                        <span class="course-card__status">
+                            Iniciado
+                        </span>
+
+                    </div>
+
+                    <div class="course-card__content">
+
+                        <h3 class="course-card__title">
+                            Enegenharia de Software
+                        </h3>
+
+                        <p class="course-card__description">
+                            Metodologias ágeis e qualidade de software.
+                        </p>
+
+                        <div class="course-card__progress">
+
+                            <div class="course-card__progress-info">
+                                <span>PROGRESSO</span>
+                                <span>0%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 0%;"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="course-card__footer">
+
+                        <a href="nivel-engenharia.html">
+                            <button class="course-card__button">
+                                INICIAR APRENDIZADO
+                            </button>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footer__content">
+
+            <div class="footer__brand">
+                <h2 class="footer__logo">
+                    Tech Academy
+                </h2>
+
+                <p class="footer__description">
+                    Capacitando estudantes com tecologia moderna.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+                <ul class="footer__list">
+
+                    <h3>NAVEGAÇÃO</h3>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Minhas Matérias</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><button id="footer__logout" class="footer__logout">Sair</button></li>
+
+                </ul>
+            </nav>
+
+            <nav class="footer__navigation" aria-label="Links do rodapé">
+
+                <ul class="footer__list">
+
+                    <h3>INSTITUCIONAL</h3>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </nav>
+
+        </section>
+
+        <p class="footer__copyright">
+            © 2026 Tech Academy. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    </main>
+
+    <script src="./js/cursos.js"></script>
+
+   <!-- MODAL DE SAÍDA -->
+
+    <div
+    class="logout-modal"
+    id="logoutModal"
+    >
+
+    <div class="logout-modal__container">
+
+        <div class="logout-modal__icon">
+        ✋
+        </div>
+
+        <h2 class="logout-modal__title">
+        Deseja mesmo sair?
+        </h2>
+
+        <p class="logout-modal__text">
+        Sentiremos sua falta! Você poderá voltar a estudar a qualquer momento.
+        </p>
+
+        <div class="logout-modal__buttons">
+
+        <button
+            class="logout-modal__continue"
+            id="closeLogoutModal"
+        >
+            Continuar Estudando
+        </button>
+
+        <button
+            class="logout-modal__exit"
+            id="confirmLogout"
+        >
+            Sair
+        </button>
+
+        </div>
+
+        <span class="logout-modal__footer">
+        TECH ACADEMY © 2026
+        </span>
+
+    </div>
+
+    </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+</body>
+</html>

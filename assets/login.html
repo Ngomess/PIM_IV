@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tech Academy</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="background-dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="sidebar__logo">
+        <img src="./logo-mark.svg" alt="Tech Academy Logo" class="sidebar__logo-box" />
+
+        <div>
+          <h1 class="sidebar__title">GovTech Academy</h1>
+          <p class="sidebar__subtitle">IT Excellence</p>
+        </div>
+      </div>
+
+      <nav class="sidebar__nav">
+
+        <a href="#" class="sidebar__link sidebar__link--active">
+          <span class="material-symbols-outlined">
+            dashboard
+          </span>
+
+          Dashboard
+        </a>
+
+        <a href="#" class="sidebar__link">
+          <span class="material-symbols-outlined">
+            school
+          </span>
+
+          Cursos
+        </a>
+
+        <a href="#" class="sidebar__link">
+          <span class="material-symbols-outlined">
+            assessment
+          </span>
+
+          Resultados
+        </a>
+
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="dashboard">
+
+      <!-- Header -->
+      <header class="dashboard__header">
+
+        <div class="dashboard__search"></div>
+
+        <div class="dashboard__actions">
+          <div class="dashboard__avatar"></div>
+          <div class="dashboard__avatar"></div>
+        </div>
+
+      </header>
+
+      <!-- Cards -->
+      <section class="dashboard__grid">
+
+        <article class="dashboard__card dashboard__card--large"></article>
+
+        <article class="dashboard__card"></article>
+
+        <article class="dashboard__card dashboard__card--tall"></article>
+
+        <article class="dashboard__card dashboard__card--wide"></article>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Overlay -->
+  <section class="auth-overlay">
+
+    <!-- Card -->
+    <div class="auth-card">
+
+      <!-- Logo -->
+      <header class="auth-card__header">
+
+        <div class="auth-card__icon">
+          <img src="./logo-mark.svg" alt="Tech Academy" class="auth-card__icon-image" />
+        </div>
+
+        <h2 class="auth-card__title">
+          Tech Academy
+        </h2>
+
+        <p class="auth-card__description">
+          Sua jornada rumo à excelência em TI no setor público.
+        </p>
+
+      </header>
+
+      <!-- Tabs -->
+      <nav class="auth-tabs">
+
+        <button class="auth-tabs__button" id="login-tab">
+          Entrar
+        </button>
+
+        <button class="auth-tabs__button auth-tabs__button--active" id="signup-tab">
+          Criar Conta
+        </button>
+
+      </nav>
+
+      <!-- Forms -->
+      <div class="auth-content">
+
+        <!-- Login -->
+        <form class="auth-form hidden" id="login-form">
+
+          <div class="form-group">
+
+            <label for="login-cpf">
+              CPF
+            </label>
+
+            <div class="input-wrapper">
+
+              <span class="material-symbols-outlined input-icon">
+                badge
+              </span>
+
+              <input id="login-cpf" type="text" placeholder="000.000.000-00">
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <div class="form-group__header">
+
+              <label for="login-password">
+                Senha
+              </label>
+
+              <a href="#">
+                Esqueceu a senha?
+              </a>
+
+            </div>
+
+            <div class="input-wrapper">
+
+              <span class="material-symbols-outlined input-icon">
+                lock
+              </span>
+
+              <input id="login-password" type="password" placeholder="••••••••">
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Signup -->
+        <form class="auth-form" id="signup-form">
+
+          <div class="form-group">
+
+            <label for="signup-email">
+              E-mail
+            </label>
+
+            <div class="input-wrapper">
+
+              <span class="material-symbols-outlined input-icon">
+                mail
+              </span>
+
+              <input id="signup-email" type="email" placeholder="estudante@govtech.com">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <label for="signup-cpf">
+              CPF
+            </label>
+
+            <div class="input-wrapper">
+
+              <span class="material-symbols-outlined input-icon">
+                badge
+              </span>
+
+              <input id="signup-cpf" type="text" placeholder="000.000.000-00">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <label for="signup-password">
+              Senha
+            </label>
+
+            <div class="input-wrapper">
+
+              <span class="material-symbols-outlined input-icon">
+                lock
+              </span>
+
+              <input id="signup-password" type="password" placeholder="••••••••">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <label for="signup-confirm-password">
+              Confirmar Senha
+            </label>
+
+            <div class="input-wrapper">
+
+              <span class="material-symbols-outlined input-icon">
+                lock_reset
+              </span>
+
+              <input id="signup-confirm-password" type="password" placeholder="••••••••">
+
+            </div>
+          </div>
+
+        </form>
+
+        <!-- CTA -->
+        <button class="auth-button" id="auth-button">
+
+          <span id="button-text">
+            Criar Minha Conta
+          </span>
+
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+
+        </button>
+
+        <!-- Terms -->
+        <p class="auth-terms">
+
+          Ao entrar, você concorda com nossos
+
+          <a href="#">
+            Termos de Uso
+          </a>
+
+          e
+
+          <a href="#">
+            Privacidade
+          </a>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Security -->
+  <aside class="security-card">
+
+    <div class="security-card__icon">
+
+      <span class="material-symbols-outlined filled-icon">
+        verified
+      </span>
+
+    </div>
+
+    <div>
+
+      <p class="security-card__title">
+        Ambiente Seguro
+      </p>
+
+      <p class="security-card__description">
+        Criptografia de ponta a ponta Tech Academy
+      </p>
+
+    </div>
+
+  </aside>
+
+  <script src="js/login.js"></script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>
