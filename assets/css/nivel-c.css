@@ -20,8 +20,8 @@ body {
 .sidebar {
   width: 280px;
   height: 100vh;
-  background-color: #ffffff;
-  border-right: 1px solid rgba(14, 27, 43, 0.12);
+  background: linear-gradient(180deg, #0E1B2B 0%, #132338 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
   padding: 24px 16px;
   position: fixed;
   display: flex;
@@ -29,25 +29,26 @@ body {
   top: 0;
   left: 0;
   overflow-y: auto;
+  box-shadow: 12px 0 32px rgba(14, 27, 43, 0.08);
 }
 
 .sidebar__logo,
 .sidebar__logo:visited,
 .sidebar__logo:hover,
 .sidebar__logo h1 {
-  color: #2AC388;
+  color: #FFFFFF;
   font-size: 1.8rem;
   text-decoration: none;
 }
 
 .sidebar__title {
-  color: #2AC388;
+  color: #FFFFFF;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 .sidebar__subtitle {
-  color: #5F6F7F;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
@@ -62,20 +63,22 @@ body {
   gap: 12px;
   padding: 14px;
   text-decoration: none;
-  color: #0E1B2B;
+  color: rgba(255, 255, 255, 0.76);
   border-radius: 12px;
   margin-bottom: 10px;
-  transition: 0.3s;
+  transition: 0.25s ease;
+  font-weight: 500;
 }
 
 .sidebar__link:hover {
-  background-color: #E6EAED;
-  color: #2AC388;
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
 }
 
 .sidebar__link--active {
-  background-color: #2AC388;
-  color: white;
+  background: linear-gradient(135deg, #1A73E9, #2D7CF7);
+  color: #FFFFFF;
+  box-shadow: 0 12px 24px rgba(26, 115, 233, 0.32);
 } 
 
 /* SUPPORT CARD */

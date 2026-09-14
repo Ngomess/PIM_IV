@@ -14,9 +14,9 @@ filterButtons.forEach((button) => {
 
 });
 
-/* =========================
+/* 
    MODAL DE SAÍDA
-========================= */
+ */
 
 document.addEventListener(
   'DOMContentLoaded',
