@@ -31,9 +31,9 @@ signupTab.addEventListener("click", () => {
 // Função principal do botão
 authButton.addEventListener("click", () => {
 
-    // ======================
+    // 
     // CADASTRO
-    // ======================
+    // 
     if (signupTab.classList.contains("auth-tabs__button--active")) {
 
         const email = document.getElementById("signup-email").value.trim();
@@ -86,9 +86,9 @@ authButton.addEventListener("click", () => {
         );
     }
 
-    // ======================
+    //
     // LOGIN
-    // ======================
+    //
     else {
 
         const cpf = document.getElementById("login-cpf").value.trim();
