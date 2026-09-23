@@ -1,10 +1,25 @@
 const profileForm = document.getElementById("profileForm");
+const settingsState = document.getElementById("settingsState");
+const saveButton = profileForm?.querySelector('button[type="submit"]');
 
-profileForm.addEventListener("submit", function (event) {
+profileForm?.addEventListener("submit", async function (event) {
 
   event.preventDefault();
 
-  alert("Alterações salvas com sucesso!");
+   setSubmitting(saveButton, true, "Salvando...");
+   setUiState(settingsState, "loading");
+
+   try {
+      if (!profileForm.checkValidity()) {
+         throw new Error("Revise os dados do perfil antes de salvar.");
+      }
+
+      setUiState(settingsState, "success", "Alterações salvas com sucesso.");
+   } catch (error) {
+      setUiState(settingsState, "error", error.message);
+   } finally {
+      setSubmitting(saveButton, false);
+   }
 
 });
 
@@ -62,8 +77,20 @@ checkboxConfirmar.addEventListener("change", () => {
 
 btnConfirmarExclusao.addEventListener("click", () => {
 
-    alert("Conta excluída com sucesso!");
+   if (!confirmAction("Excluir sua conta definitivamente? Essa ação não pode ser desfeita.")) {
+      return;
+   }
 
-    modalExcluir.classList.remove("active");
+   setSubmitting(btnConfirmarExclusao, true, "Excluindo...");
+   setUiState(settingsState, "loading");
+
+   try {
+      modalExcluir.classList.remove("active");
+      setUiState(settingsState, "success", "Conta excluída com sucesso.");
+   } catch (error) {
+      setUiState(settingsState, "error", error.message);
+   } finally {
+      setSubmitting(btnConfirmarExclusao, false);
+   }
 
 });

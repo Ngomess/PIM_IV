@@ -15,6 +15,7 @@ filterButtons.forEach((button) => {
 });
 
 const replyButtons = document.querySelectorAll('.reply-button');
+const professorState = document.getElementById('professorState');
 
 replyButtons.forEach((button) => {
 
@@ -36,6 +37,34 @@ replyButtons.forEach((button) => {
 
     });
 
+});
+
+document.querySelectorAll('.submit-button').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const questionCard = button.closest('.question-card');
+    const textarea = questionCard?.querySelector('.reply-box__textarea');
+
+    setSubmitting(button, true, 'Publicando...');
+    setUiState(professorState, 'loading');
+
+    try {
+      if (!textarea?.value.trim()) {
+        throw new Error('Digite uma resposta antes de publicar.');
+      }
+
+      if (!confirmAction('Publicar esta resposta no fórum?')) {
+        setUiState(professorState, 'empty', 'Publicação cancelada.');
+        return;
+      }
+
+      textarea.value = '';
+      setUiState(professorState, 'success', 'Resposta publicada com sucesso.');
+    } catch (error) {
+      setUiState(professorState, 'error', error.message);
+    } finally {
+      setSubmitting(button, false);
+    }
+  });
 });
 
 /* 
