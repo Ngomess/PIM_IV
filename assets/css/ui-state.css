@@ -1,0 +1,61 @@
+.ui-state[hidden] {
+    display: none;
+}
+
+.ui-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 72px;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    color: #0E1B2B;
+}
+
+.ui-state strong,
+.ui-state span {
+    display: block;
+}
+
+.ui-state--loading {
+    background: #EEF2F5;
+}
+
+.ui-state--success {
+    background: #EAF7F0;
+    color: #137A4B;
+}
+
+.ui-state--empty {
+    flex-direction: column;
+    background: #F5F7FA;
+}
+
+.ui-state--error {
+    flex-direction: column;
+    background: #FFF1F1;
+    color: #A62020;
+}
+
+.ui-state__spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(14, 27, 43, 0.18);
+    border-top-color: #1A73E9;
+    border-radius: 50%;
+    animation: ui-state-spin 0.8s linear infinite;
+}
+
+@keyframes ui-state-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button:disabled,
+[aria-busy="true"] {
+    cursor: wait;
+    opacity: 0.65;
+}

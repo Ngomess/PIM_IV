@@ -7,6 +7,7 @@ const signupForm = document.getElementById("signup-form");
 
 const buttonText = document.getElementById("button-text");
 const authButton = document.getElementById("auth-button");
+const loginState = document.getElementById("loginState");
 
 loginTab.addEventListener("click", () => {
     loginTab.classList.add("auth-tabs__button--active");
@@ -29,11 +30,16 @@ signupTab.addEventListener("click", () => {
 });
 
 // Função principal do botão
-authButton.addEventListener("click", () => {
+authButton.addEventListener("click", async () => {
 
-    // ======================
+    setUiState(loginState, "loading");
+    setSubmitting(authButton, true, "Processando...");
+
+    try {
+
+    // 
     // CADASTRO
-    // ======================
+    // 
     if (signupTab.classList.contains("auth-tabs__button--active")) {
 
         const email = document.getElementById("signup-email").value.trim();
@@ -86,9 +92,9 @@ authButton.addEventListener("click", () => {
         );
     }
 
-    // ======================
+    //
     // LOGIN
-    // ======================
+    //
     else {
 
         const cpf = document.getElementById("login-cpf").value.trim();
@@ -125,5 +131,10 @@ authButton.addEventListener("click", () => {
 
         // Redirecionar para dashboard
         // window.location.href = "dashboard.html";
+    }
+    } catch (error) {
+        setUiState(loginState, "error", error.message);
+    } finally {
+        setSubmitting(authButton, false);
     }
 });

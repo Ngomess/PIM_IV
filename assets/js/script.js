@@ -14,9 +14,9 @@ sidebarLinks.forEach((link) => {
 
 });
 
-/* =========================
+/* 
    MODAL DE SAÍDA
-========================= */
+ */
 
 document.addEventListener(
   'DOMContentLoaded',
