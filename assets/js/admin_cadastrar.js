@@ -4,7 +4,7 @@ const subjectField = document.getElementById('subjectField');
 
 userRole.addEventListener('change', () => {
 
-    if (userRole.value === 'tutor') {
+    if (userRole.value === 'professor') {
 
         subjectField.style.display = 'flex';
 

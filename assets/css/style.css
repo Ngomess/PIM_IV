@@ -246,9 +246,9 @@ a, button, input {
     border-radius: 50%;
 }
 
-/* =========================================
+/* 
    STREAK CARD (OFENSIVAS)
-   ========================================= */
+   */
 
 .streak-card {
     background-color: #ffffff;
@@ -445,9 +445,9 @@ a, button, input {
     transition: width 0.5s ease-in-out;
 }
 
-/* =========================================
+/* 
    HERO 
-   ========================================= */
+*/
 
 .hero {
     display: grid;
@@ -508,9 +508,9 @@ a, button, input {
     margin-top: 16px;
 }
 
-/* =========================================
+/* 
    PROGRESS BAR (GERAL)
-   ========================================= */
+  */
 
 .progress-bar {
     width: 100%;
@@ -545,9 +545,9 @@ a, button, input {
     background-color: var(--mint);
 }
 
-/* =========================================
+/*
    COURSES 
-   ========================================= */
+ */
 
 .courses {
     padding: 0 40px 40px;
@@ -622,9 +622,9 @@ a, button, input {
     margin-bottom: 10px;
 }
 
-/* =========================================
+/* 
    FOOTER 
-   ========================================= */
+    */
 
 .footer {
     margin-top: 80px;
