@@ -1,0 +1,23 @@
+# Testes HTTP locais: podem conter senhas e tokens
+**/test.http
+
+# Configurações locais e segredos
+**/appsettings.Development.json
+**/secrets.json
+**/appsettings.Local.json
+
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Arquivos locais do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Arquivos temporários e backups
+*.bak
+*.tmp
+
+# Arquivos de testes HTTP locais
+**/*.http
