@@ -42,12 +42,13 @@ authButton.addEventListener("click", async () => {
     // 
     if (signupTab.classList.contains("auth-tabs__button--active")) {
 
+        const nome = document.getElementById("signup-name").value.trim();
         const email = document.getElementById("signup-email").value.trim();
         const cpf = document.getElementById("signup-cpf").value.trim();
         const senha = document.getElementById("signup-password").value;
         const confirmarSenha = document.getElementById("signup-confirm-password").value;
 
-        if (!email || !cpf || !senha || !confirmarSenha) {
+        if (!nome || !email || !cpf || !senha || !confirmarSenha) {
             alert("Preencha todos os campos.");
             return;
         }
@@ -70,6 +71,7 @@ authButton.addEventListener("click", async () => {
 
         const novoUsuario = {
             id: Date.now(),
+            name: nome,
             email,
             cpf,
             senha,
