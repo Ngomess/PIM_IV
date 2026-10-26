@@ -142,6 +142,8 @@ const questionsStatus =
 const questionResults =
   Array(questions.length).fill(null);
 
+const quizState = document.getElementById("quizState");
+
 /* LOAD QUESTION */
 
 function loadQuestion() {
@@ -290,57 +292,46 @@ function renderSidebar() {
 
 /* NEXT BUTTON */
 
-nextButton.addEventListener("click", (event) => {
+nextButton.addEventListener("click", async (event) => {
 
   event.preventDefault();
+  setSubmitting(nextButton, true, "Avaliando...");
+  setUiState(quizState, "loading");
 
-  const selected =
-    document.querySelector(
-      'input[name="answer"]:checked'
-    );
+  try {
+    const selected =
+      document.querySelector(
+        'input[name="answer"]:checked'
+      );
 
-  if (!selected) {
+    if (!selected) {
+      throw new Error("Selecione uma alternativa antes de continuar.");
+    }
 
-    alert("Selecione uma alternativa.");
+    const answer = Number(selected.value);
+    const isCorrect = answer === questions[currentQuestion].correct;
 
-    return;
+    questionResults[currentQuestion] = isCorrect;
 
-  }
+    if (isCorrect) {
+      score++;
+    }
 
-  const answer =
-    Number(selected.value);
+    scoreText.textContent = `${score} acertos`;
+    currentQuestion++;
 
-  const isCorrect =
-    answer ===
-    questions[currentQuestion].correct;
-
-  questionResults[currentQuestion] =
-    isCorrect;
-
-  if (isCorrect) {
-
-    score++;
-
-  }
-
-  scoreText.textContent =
-    `${score} acertos`;
-
-  currentQuestion++;
-
-  if (
-    currentQuestion <
-    questions.length
-  ) {
-
-    loadQuestion();
-
-  }
-
-  else {
-
-    showResult();
-
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+      setUiState(quizState, "success", "Resposta registrada.");
+      window.setTimeout(() => clearUiState(quizState), 900);
+    } else {
+      showResult();
+      setUiState(quizState, "success", "Simulado finalizado.");
+    }
+  } catch (error) {
+    setUiState(quizState, "error", error.message);
+  } finally {
+    setSubmitting(nextButton, false);
   }
 
 });

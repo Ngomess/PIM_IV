@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Painel do Tutor | Tech Academy</title>
+    <title>Painel do Professor | Tech Academy</title>
 
-    <link rel="stylesheet" href="./css/tutor.css">
+    <link rel="stylesheet" href="./css/professor.css">
+    <link rel="stylesheet" href="./css/ui-state.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +36,7 @@
             </h1>
 
             <p class="topbar__subtitle">
-                Painel do Tutor
+                Painel do Professor
             </p>
 
         </div>
@@ -142,6 +143,8 @@
         <!-- FILTROS -->
         <section class="forum-filters">
 
+            <div id="professorState" hidden aria-live="polite"></div>
+
             <button class="filter-button filter-button--active">
                 Todas
             </button>
@@ -229,7 +232,7 @@
 
                     <div class="reply-box__actions">
 
-                        <button class="submit-button">
+                        <button class="submit-button" type="button">
                             Publicar Resposta
                         </button>
 
@@ -354,7 +357,8 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-    <script src="./js/tutor.js"></script>
+    <script src="./js/ui-state.js"></script>
+    <script src="./js/professor.js"></script>
 
     <!-- MODAL DE SAÍDA -->
 
@@ -366,7 +370,10 @@
         <div class="logout-modal__container">
 
             <div class="logout-modal__icon">
-            ✋
+            
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
             </div>
 
             <h2 class="logout-modal__title">

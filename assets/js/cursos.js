@@ -1,17 +1,73 @@
 const filterButtons = document.querySelectorAll('.filter__button');
+const courseGrid = document.querySelector('.course-grid');
+const coursesState = document.getElementById('coursesState');
 
-filterButtons.forEach((button) => {
+async function applyCourseFilter(filter) {
+  setUiState(coursesState, 'loading');
 
-    button.addEventListener('click', () => {
+  try {
+    if (!courseGrid) {
+      throw new Error('A lista de cursos não foi encontrada.');
+    }
 
-        filterButtons.forEach((item) => {
-            item.classList.remove('filter__button--active');
-        });
+    const cards = [...courseGrid.querySelectorAll('.course-card')];
 
-        button.classList.add('filter__button--active');
+    cards.forEach((card) => {
+      const status = card.querySelector('.course-card__status')?.textContent
+        .trim()
+        .toLowerCase();
 
+      const shouldShow = filter === 'Todos'
+        || (filter === 'Iniciados' && status === 'iniciado')
+        || (filter === 'Terminados' && status === 'concluído');
+
+      card.hidden = !shouldShow;
     });
 
+    const visibleCards = cards.filter((card) => !card.hidden);
+
+    if (!visibleCards.length) {
+      setUiState(coursesState, 'empty', 'Nenhum curso corresponde a este filtro.');
+      return;
+    }
+
+    setUiState(coursesState, 'success', `Filtro "${filter}" aplicado.`);
+    window.setTimeout(() => clearUiState(coursesState), 1200);
+  } catch (error) {
+    setUiState(coursesState, 'error', error.message);
+  } finally {
+    filterButtons.forEach((item) => {
+      item.disabled = false;
+    });
+  }
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener('click', async () => {
+    filterButtons.forEach((item) => {
+      item.classList.remove('filter__button--active');
+      item.disabled = true;
+    });
+
+    button.classList.add('filter__button--active');
+    await applyCourseFilter(button.textContent.trim());
+  });
+});
+
+document.querySelectorAll('.course-card__button').forEach((button) => {
+  button.addEventListener('click', () => {
+    try {
+      const link = button.closest('a');
+
+      if (!link?.href) {
+        throw new Error('O destino deste curso não está disponível.');
+      }
+
+      setSubmitting(button, true, 'Abrindo...');
+    } catch (error) {
+      setUiState(coursesState, 'error', error.message);
+    }
+  });
 });
 
 /* 

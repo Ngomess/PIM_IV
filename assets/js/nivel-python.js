@@ -1,8 +1,24 @@
 const levelButtons = document.querySelectorAll('.level-card__button');
+const levelState = document.getElementById('levelState');
 
 levelButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    alert('Nível selecionado com sucesso!');
+  button.addEventListener('click', async () => {
+    setSubmitting(button, true, 'Abrindo...');
+    setUiState(levelState, 'loading');
+
+    try {
+      const link = button.closest('a');
+      if (!link?.href) {
+        throw new Error('Este nível não está disponível.');
+      }
+
+      setUiState(levelState, 'success', 'Nível selecionado com sucesso.');
+      window.location.href = link.href;
+    } catch (error) {
+      setUiState(levelState, 'error', error.message);
+    } finally {
+      setSubmitting(button, false);
+    }
   });
 });
 

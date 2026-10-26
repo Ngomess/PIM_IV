@@ -7,6 +7,7 @@
     <title>Fórum | Tech Academy</title>
 
     <link rel="stylesheet" href="./css/forum.css">
+    <link rel="stylesheet" href="./css/ui-state.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,6 +184,8 @@
         </div>
 
         <form id="forumForm">
+
+          <div id="forumState" hidden aria-live="polite"></div>
 
           <div class="question-form__grid">
 
@@ -394,6 +397,7 @@
   </main>
 
   <!-- JAVASCRIPT -->
+  <script src="js/ui-state.js"></script>
   <script src="js/forum.js"></script>
 
   <div vw class="enabled">

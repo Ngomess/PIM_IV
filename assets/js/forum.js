@@ -6,27 +6,31 @@ const questionTitle = document.querySelector("#questionTitle");
 const questionCategory = document.querySelector("#questionCategory");
 const questionDescription = document.querySelector("#questionDescription");
 
-// EVENTO DE ENVIO
-forumForm.addEventListener("submit", function(event){
+const forumState = document.querySelector('#forumState');
+const submitButton = forumForm?.querySelector('.submit-button');
 
+forumForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  // VALIDAÇÃO
-  if(
-    questionTitle.value === "" ||
-    questionCategory.value === "" ||
-    questionDescription.value === ""
-  ){
+  setUiState(forumState, 'loading');
+  setSubmitting(submitButton, true, 'Enviando...');
 
-    alert("Preencha todos os campos.");
+  try {
+    if (!questionTitle.value.trim() || !questionCategory.value || !questionDescription.value.trim()) {
+      throw new Error('Preencha assunto, matéria e descrição.');
+    }
 
-    return;
+    const discussionList = document.querySelector('.discussions');
+
+    if (!discussionList) {
+      throw new Error('A área de discussões não está disponível.');
+    }
+
+    forumForm.reset();
+    setUiState(forumState, 'success', 'Pergunta enviada com sucesso.');
+  } catch (error) {
+    setUiState(forumState, 'error', error.message);
+  } finally {
+    setSubmitting(submitButton, false);
   }
-
-  // SUCESSO
-  alert("Pergunta enviada com sucesso!");
-
-  // LIMPAR FORMULÁRIO
-  forumForm.reset();
-
 });
